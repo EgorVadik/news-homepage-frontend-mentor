@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | News homepage</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            inter: ['Inter', 'sans-serif'],
+                        },
+                        colors: {
+                            softOrange: 'hsl(35, 77%, 62%)',
+                            softRed: 'hsl(5, 85%, 63%)',
+                            offWhite: 'hsl(36, 100%, 99%)',
+                            grayishBlue: 'hsl(233, 8%, 79%)',
+                            darkGrayBlue: 'hsl(236, 13%, 42%)',
+                            darkBlue: 'hsl(240, 100%, 5%)',
+                        },
+                        fontSize: {
+                            sm: '15px',
+                        },
+                    },
+                },
+            }
+        </script>
+        <script src="menu.js" defer></script>
+    </head>
+    <body
+        class="container h-screen m-auto font-inter text-sm p-4 md:p-16 relative"
+    >
+        <nav class="flex items-center mb-12">
+            <img src="assets/images/logo.svg" class="mr-auto" />
+            <button class="inline md:hidden" id="openBtn">
+                <img src="assets/images/icon-menu.svg" />
+            </button>
+            <div class="w-full absolute inset-0 hidden" id="menu">
+                <div
+                    class="w-3/4 absolute bg-offWhite h-screen inset-y-0 right-0"
+                >
+                    <button class="block ml-auto p-10" id="closeBtn">
+                        <img src="assets/images/icon-menu-close.svg" />
+                    </button>
+                    <ul
+                        class="flex flex-col space-y-5 text-darkBlue px-6 mt-16 text-lg"
+                    >
+                        <li>
+                            <a href="#" class="hover:text-softRed"> Home </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-softRed"> New </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-softRed"> Popular </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-softRed">
+                                Trending
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-softRed">
+                                Categories
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="bg-black h-screen w-1/4 opacity-50"
+                    id="close"
+                ></div>
+            </div>
+            <ul class="md:flex space-x-7 text-darkGrayBlue hidden">
+                <li><a href="#" class="hover:text-softRed"> Home </a></li>
+                <li><a href="#" class="hover:text-softRed"> New </a></li>
+                <li>
+                    <a href="#" class="hover:text-softRed"> Popular </a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-softRed"> Trending </a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-softRed"> Categories </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex flex-col lg:flex-row mb-12">
+            <div class="pr-0 md:pr-6">
+                <div>
+                    <img
+                        src="assets/images/image-web-3-desktop.jpg"
+                        class="h-80 w-full mb-7"
+                    />
+                </div>
+                <div class="flex flex-col md:flex-row">
+                    <div class="text-5xl f-full md:w-1/2 font-extrabold">
+                        <h1 class="w-full lg:w-2/3">
+                            The Bright Future of Web 3.0?
+                        </h1>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <p class="text-darkGrayBlue pt-5 lg:pt-0">
+                            We dive into the next evolution of the web that
+                            claims to put the power of the platforms back into
+                            the hands of the people. But is it really fulfilling
+                            its promise?
+                        </p>
+                        <button
+                            class="py-3 px-8 bg-softRed text-offWhite font-bold tracking-[0.3rem] hover:bg-darkBlue my-5"
+                        >
+                            READ MORE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-darkBlue text-offWhite space-y-5">
+                <h1 class="text-softOrange text-3xl font-bold px-4 py-5">
+                    New
+                </h1>
+                <div class="p-4">
+                    <a href="#" class="font-bold hover:text-softOrange"
+                        >Hydrogen VS Electric Cars</a
+                    >
+                    <p class="text-darkGrayBlue">
+                        Will hydrogen-fueled cars ever catch up to EVs?
+                    </p>
+                </div>
+
+                <hr
+                    class="h-px my-2 border-0 dark:bg-gray-700 w-11/12 m-auto"
+                />
+
+                <div class="p-4">
+                    <a href="#" class="font-bold hover:text-softOrange"
+                        >The Downsides of AI Artistry</a
+                    >
+                    <p class="text-darkGrayBlue">
+                        What are the possible adverse effects of on-demand AI
+                        image generation?
+                    </p>
+                </div>
+
+                <hr
+                    class="h-px my-2 border-0 dark:bg-gray-700 w-11/12 m-auto"
+                />
+
+                <div class="p-4">
+                    <a href="#" class="font-bold hover:text-softOrange"
+                        >Is VC Funding Drying Up?</a
+                    >
+                    <p class="text-darkGrayBlue">
+                        Private funding by VC firms is down 50% YOY. We take a
+                        look at what that means.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row justify-center">
+            <div class="flex py-5">
+                <img src="assets/images/image-retro-pcs.jpg" class="w-36" />
+                <div class="px-6">
+                    <h3 class="text-4xl text-grayishBlue font-bold">01</h3>
+                    <a href="#" class="font-bold text-xl hover:text-softRed"
+                        >Reviving Retro PCs</a
+                    >
+                    <p class="text-darkGrayBlue">
+                        What happens when old PCs are given modern upgrades?
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex py-5">
+                <img src="assets/images/image-top-laptops.jpg" class="w-36" />
+                <div class="px-6">
+                    <h3 class="text-4xl text-grayishBlue font-bold">02</h3>
+                    <a href="#" class="font-bold text-xl hover:text-softRed"
+                        >Top 10 Laptops of 2022</a
+                    >
+                    <p class="text-darkGrayBlue">
+                        Top 10 Laptops of 2022 Our best picks for various needs
+                        and budgets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex py-5">
+                <img src="assets/images/image-gaming-growth.jpg" class="w-36" />
+                <div class="px-6">
+                    <h3 class="text-4xl text-grayishBlue font-bold">03</h3>
+                    <a href="#" class="font-bold text-xl hover:text-softRed"
+                        >The Growth of Gaming</a
+                    >
+                    <p class="text-darkGrayBlue">
+                        How the pandemic has sparked fresh opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </div> -->
+    </body>
+</html>
